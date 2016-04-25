@@ -35,11 +35,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/mainpage.html'
   })
 
   //load main page
-  
+
     .state('/', {
     url: '/',
     templateUrl: 'templates/mainpage.html'
