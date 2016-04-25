@@ -38,6 +38,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl: 'templates/login.html',
     controller: 'LoginController'
   })
+    .state('guardian', {
+      url: '/guardian',
+      templateUrl: 'templates/guardian.html',
+      controller: 'GuardianController'
+  })
+    .state('teacher', {
+      url: '/teacher',
+      templateUrl: 'templates/teacher.html',
+      controller: 'TeacherController'
+  })
+    .state('admin', {
+      url: '/admin',
+      templateUrl: 'templates/admin.html',
+      controller: 'AdminController'
+    })
 
   // setup an abstract state for the tabs directive
     .state('tab', {

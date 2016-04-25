@@ -1,10 +1,28 @@
 angular.module('starter.controllers', [])
 
-.controller('LoginController', function($scope) {
-  $scope.count = 0;
-  $scope.login = function () {
-    $scope.count = $scope.count + 1;
+.controller('LoginController', function ($scope) {
+  
+  $scope.adminLogin = function () {
+    
   };
+  $scope.teacherLogin = function () {
+
+  };
+  $scope.guardianLogin = function () {
+
+  };
+})
+
+.controller ('TeacherController', function ($scope) {
+
+})
+
+.controller('AdminController', function ($scope) {
+
+})
+
+.controller('GuardianController', function ($scope) {
+
 })
 
 .controller('DashCtrl', function($scope) {})
