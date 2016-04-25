@@ -1,10 +1,27 @@
 /* Empty. Add your own CSS if you like */
+.login-type {
+  float: left;
+  list-style-type: none;
+  border-right: 1px solid black;
+}
+
+.login-type-no-border {
+  float: left;
+  list-style-type: none;
+}
+
 .login-div {
   width: 15em;
   height: 30em;
+  border: 1px solid black;
 }
 
 .login-input {
-  border: 1px solid black;
   width: 80%;
+  height: 5px;
+  border: 1px solid black;
+}
+
+.login-label {
+  float: left;
 }

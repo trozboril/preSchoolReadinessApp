@@ -1,0 +1,19 @@
+<ion-view view-title="Login">
+  <ion-content>
+    <div class='select-login'>
+      <ul>
+        <li class='login-type'>Guardian</li>
+        <li class='login-type'>Teacher</li>
+        <li class='login-type-no-border'>Administrator</li>
+      </ul>
+    </div>
+    <div class='login-div'>
+      <form>
+        <p class='login-label'><strong>Email: </strong><input class='login-input' type='text' placeholder='email...'></p>
+        <p class='login-label'><strong>Password: </strong><input class='login-input' type='password' placeholder='enter password...'></p>
+        <div style='clear:both'></div>
+        <button ng-click='login()'>Login</button>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

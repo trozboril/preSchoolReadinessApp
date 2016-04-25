@@ -31,18 +31,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+//load main page
+
+    .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html'
+  })
+
   // setup an abstract state for the tabs directive
     .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/mainpage.html'
-  })
-
-  //load main page
-
-    .state('/', {
-    url: '/',
-    templateUrl: 'templates/mainpage.html'
+    templateUrl: 'templates/tabs.html'
   })
 
   // Each tab has its own nav history stack:
