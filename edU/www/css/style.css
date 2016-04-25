@@ -1,4 +1,9 @@
 /* Empty. Add your own CSS if you like */
+.login-div {
+  width: 15em;
+  height: 30em;
+}
+
 .login-input {
   border: 1px solid black;
   width: 80%;
