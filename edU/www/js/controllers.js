@@ -1,5 +1,12 @@
 angular.module('starter.controllers', [])
 
+.controller('LoginController', function($scope) {
+  $scope.count = 0;
+  $scope.login = function () {
+    $scope.count = $scope.count + 1;
+  };
+})
+
 .controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
