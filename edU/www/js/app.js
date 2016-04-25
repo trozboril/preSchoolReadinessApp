@@ -52,7 +52,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/admin',
       templateUrl: 'templates/admin.html',
       controller: 'AdminController'
-    })
+  })
 
   // setup an abstract state for the tabs directive
     .state('tab', {

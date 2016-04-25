@@ -1,4 +1,7 @@
 /* Empty. Add your own CSS if you like */
+
+/*LOGIN PAGE*/
+
 .login-type {
   float: left;
   list-style-type: none;
@@ -19,5 +22,11 @@
 .login-input {
   width: 80%;
   height: 5px;
+  border: 1px solid black;
+}
+
+/*GUARDIAN PAGE*/
+
+.guardian-individual-student {
   border: 1px solid black;
 }

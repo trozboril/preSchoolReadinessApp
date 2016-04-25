@@ -1,7 +1,13 @@
 <ion-view view-title="Guardian Dashboard">
   <ion-content>
 
-  <h1>Test</h1>
+  <h1>Your <strong>Students: </strong></h1>
+  <div class='guardian-student-container'>
+    <div class='guardian-individual-student' ng-repeat='student in students'>
+      <input type='checkbox' name='show-student'> Show Student Information<br>
+      <!-- code goes here -->
+    </div>
+  </div>
 
   </ion-content>
 </ion-view>
