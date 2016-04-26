@@ -27,6 +27,11 @@ angular.module('eduApp.controllers', [])
       console.log(data.data);
       $scope.students = data.data;
     });
+  studentService.getStudentActivities()
+    .then(function (data) {
+      console.log('activitiesData', data);
+      $scope.activities = data.data;
+    });
 })
 
 .controller('DashCtrl', function($scope) {})

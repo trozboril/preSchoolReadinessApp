@@ -7,7 +7,19 @@
       <p>{{student.firstName}}</p>
       <input type='checkbox' ng-model='showStudent' name='show-student'> Show Info<br>
       <div ng-show='showStudent === true'>
-        <p>test</p>
+        <div ng-repeat='activity in activities' ng-if='activity.studentid === student.id'>
+          <div>
+            <table border="1" style="width:100%">
+              <tr ng-for=''>
+                <td><strong>{{activity.name}}</strong></td>
+                <td>{{activity.description}}</td> 
+                <td>{{activity.type}}</td>
+                <td>{{activity.startTime}}</td>
+                <td>{{activity.finishTime}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </div>
