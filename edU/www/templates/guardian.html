@@ -3,9 +3,12 @@
 
   <h1>Your <strong>Students: </strong></h1>
   <div class='guardian-student-container'>
-    <div class='guardian-individual-student' ng-repeat='student in students'>
-      <input type='checkbox' name='show-student'> Show Student Information<br>
-      <!-- code goes here -->
+    <div ng-init='showStudent = false' class='guardian-individual-student' ng-repeat='student in students'>
+      <p>{{student.firstName}}</p>
+      <input type='checkbox' ng-model='showStudent' name='show-student'> Show Info<br>
+      <div ng-show='showStudent === true'>
+        <p>test</p>
+      </div>
     </div>
   </div>
 

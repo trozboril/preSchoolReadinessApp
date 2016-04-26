@@ -11,38 +11,50 @@
   <!--     <div stype='clear:both'></div> -->
     <div class='login-wrap'>
       <div class='login-div' ng-show='adminCount'>
-        <form>
-          <label class='item item-input'><strong>Admin Email: </strong></label>
-          <input ng-model='user.email' type='text' placeholder='email...'>
-          <label class='item item-input'><strong>Admin Password: </strong></label>
-          <input ng-model='user.password' type='password' placeholder='enter password...'>
+        <div class="list">
+          <label class="item item-input">Email:
+          <input type="text" placeholder="Admin email...">
+          </label>
+
+          <label class="item item-input">Password:
+          <input type="password" placeholder="Admin password...">
+          </label>
           <div style='clear:both'></div>
+          <br>
           <a href='#/admin'><button class='btn btn-primary' ng-click='adminLogin()'>Login</button></a>
-        </form>
+        </div>
       </div>
     </div>
     <div class='login-wrap'>
       <div class='login-div' ng-show='guardianCount'>
-        <form>
-          <label class='item item-input'><strong>Guardian Email: </strong></label>
-          <input ng-model='user.email'class='item item-input' type='text' placeholder='email...'>
-          <label class='item item-input'><strong>Guardian Password: </strong></label>
-          <input ng-model='user.password' type='password' placeholder='enter password...'>
+        <div class="list">
+          <label class="item item-input">Email:
+          <input type="text" placeholder="Guardian email...">
+          </label>
+
+          <label class="item item-input">Password:
+          <input type="password" placeholder="Guardian password...">
+          </label>
           <div style='clear:both'></div>
+          <br>
           <a href='#/guardian'><button class='btn btn-primary' ng-click='guardianLogin()'>Login</button></a>
-        </form>
+        </div>
       </div>
     </div>
     <div class='login-wrap'>
       <div class='login-div' ng-show='teacherCount'>
-        <form>
-          <label class='item item-input'><strong>Teacher Email: </strong></label>
-          <input ng-model='user.email' type='text' placeholder='email...'>
-          <label class='item item-input'><strong>Teacher Password: </strong></label>
-          <input ng-model='user.password' type='password' placeholder='enter password...'>
+        <div class="list">
+          <label class="item item-input">Email:
+          <input type="text" placeholder="Teacher email...">
+          </label>
+
+          <label class="item item-input">Password:
+          <input type="password" placeholder="Teacher password...">
+          </label>
           <div style='clear:both'></div>
+          <br>
           <a href='#/teacher'><button class='btn btn-primary' ng-click='teacherLogin()'>Login</button></a>
-        </form>
+        </div>
       </div>
     </div>
   </ion-content>

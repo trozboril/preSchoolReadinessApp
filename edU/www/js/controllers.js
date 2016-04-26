@@ -21,8 +21,12 @@ angular.module('eduApp.controllers', [])
 
 })
 
-.controller('GuardianController', function ($scope) {
-
+.controller('GuardianController', function ($scope, studentService) {
+  studentService.getStudents()
+    .then(function (data) {
+      console.log(data.data);
+      $scope.students = data.data;
+    });
 })
 
 .controller('DashCtrl', function($scope) {})
