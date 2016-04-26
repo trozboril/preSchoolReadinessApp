@@ -2,27 +2,37 @@
 
 /*LOGIN PAGE*/
 
-.login-type {
-  float: left;
-  list-style-type: none;
-  border-right: 1px solid black;
+.login-container {
+  width: 100%;
 }
 
-.login-type-no-border {
-  float: left;
+.select-button {
+  width: 100px;
+}
+
+.select-login {
+
+}
+
+.login-wrap {
+  border: 1px solid black;
+  width: 16em;
+  margin-left: 38px;
+}
+
+.login-type {
+  display: inline-block;
   list-style-type: none;
 }
 
 .login-div {
-  margin-left: 5px;
+  margin-left: 7px;
+  margin-top: 5px;
   width: 15em;
-  border: 1px solid black;
 }
 
 .login-input {
-  width: 80%;
-  height: 5px;
-  border: 1px solid black;
+ margin-top: 5px;
 }
 
 /*GUARDIAN PAGE*/
