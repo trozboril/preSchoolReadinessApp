@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('eduApp', ['ionic', 'eduApp.controllers', 'eduApp.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -34,20 +34,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 //load main page
 
     .state('login', {
-    url: '/login',
-    templateUrl: 'templates/login.html',
-    controller: 'LoginController'
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginController'
   })
+    //guardian page
     .state('guardian', {
       url: '/guardian',
       templateUrl: 'templates/guardian.html',
       controller: 'GuardianController'
   })
+    //teacher page (can only put)
     .state('teacher', {
       url: '/teacher',
       templateUrl: 'templates/teacher.html',
       controller: 'TeacherController'
   })
+    //admin page (all creation happens here)
     .state('admin', {
       url: '/admin',
       templateUrl: 'templates/admin.html',

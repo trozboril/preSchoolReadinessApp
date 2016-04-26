@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('eduApp.controllers', [])
 
 .controller('LoginController', function ($scope) {
   
