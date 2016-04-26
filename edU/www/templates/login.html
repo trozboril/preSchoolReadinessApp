@@ -1,10 +1,10 @@
 <ion-view view-title="Login">
   <ion-content>
     <div class='select-login'>
-      <ul>
-        <li class='login-type' ng-click='guardianCount = !guardianCount'><button>Guardian</button></li>
-        <li class='login-type' ng-click='teacherCount = !teacherCount'><button>Teacher</button></li>
-        <li class='login-type-no-border' ng-click='adminCount = !adminCount'><button>Administrator</button></li>
+      <ul ng-init='guardianCount = true;'>
+        <li class='login-type' ng-click='guardianCount = !guardianCount; teacherCount = false; adminCount = false'><button>Guardian</button></li>
+        <li class='login-type' ng-click='teacherCount = !teacherCount; guardianCount = false; adminCount = false'><button>Teacher</button></li>
+        <li class='login-type-no-border' ng-click='adminCount = !adminCount; guardianCount = false; teacherCount = false'><button>Administrator</button></li>
       </ul>
     </div>
     <div stype='clear:both'></div>
