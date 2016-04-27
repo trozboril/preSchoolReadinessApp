@@ -7,7 +7,7 @@
 }
 
 .select-button {
-  width: 100px;
+  width: 150px;
 }
 
 .select-login {
@@ -39,4 +39,10 @@
 
 .guardian-individual-student {
   border: 1px solid black;
+}
+
+/*ADMIN PAGE*/
+
+.admin-button {
+  width: 100px;
 }

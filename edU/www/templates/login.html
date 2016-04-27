@@ -3,58 +3,43 @@
     <div class='login-container'>
       <div class='select-login'>
         <ul ng-init='guardianCount = true;'>
-          <li class='login-type' ng-click='guardianCount = !guardianCount; teacherCount = false; adminCount = false'><button class='btn btn-success select-button'>Guardian</button></li>
-          <li class='login-type' ng-click='teacherCount = !teacherCount; guardianCount = false; adminCount = false'><button class='btn btn-success select-button'>Teacher</button></li>
-          <li class='login-type' ng-click='adminCount = !adminCount; guardianCount = false; teacherCount = false'><button class='btn btn-success select-button'>Admin</button></li>
+          <li class='login-type' ng-click='guardianCount = !guardianCount; schoolCount = false'><button class='btn btn-success select-button'>Guardian</button></li>
+          <li class='login-type' ng-click='schoolCount = !schoolCount; guardianCount = false'><button class='btn btn-success select-button'>School</button></li>
         </ul>
       </div>
   <!--     <div stype='clear:both'></div> -->
       <div class='login-wrap'>
-        <div class='login-div' ng-show='adminCount'>
-          <div class="list">
-            <label class="item item-input">Email:
+        <div class='login-div' ng-show='schoolCount'>
+          <h3>School Login</h3>
+          <form class="list">
+            <label class="item item-input">Email: 
             <input type="text" placeholder="Admin email...">
             </label>
 
-            <label class="item item-input">Password:
+            <label class="item item-input">Password:    
             <input type="password" placeholder="Admin password...">
             </label>
             <div style='clear:both'></div>
             <br>
             <a href='#/admin'><button class='btn btn-primary' ng-click='adminLogin()'>Login</button></a>
-          </div>
+          </form>
         </div>
       </div>
       <div class='login-wrap'>
         <div class='login-div' ng-show='guardianCount'>
-          <div class="list">
-            <label class="item item-input">Email:
+         <h3>Guardian Login</h3>
+          <form class="list">
+            <label class="item item-input">Email: 
             <input type="text" placeholder="Guardian email...">
             </label>
 
-            <label class="item item-input">Password:
+            <label class="item item-input">Password: 
             <input type="password" placeholder="Guardian password...">
             </label>
             <div style='clear:both'></div>
             <br>
             <a href='#/guardian'><button class='btn btn-primary' ng-click='guardianLogin()'>Login</button></a>
-          </div>
-        </div>
-      </div>
-      <div class='login-wrap'>
-        <div class='login-div' ng-show='teacherCount'>
-          <div class="list">
-            <label class="item item-input">Email:
-            <input type="text" placeholder="Teacher email...">
-            </label>
-
-            <label class="item item-input">Password:
-            <input type="password" placeholder="Teacher password...">
-            </label>
-            <div style='clear:both'></div>
-            <br>
-            <a href='#/teacher'><button class='btn btn-primary' ng-click='teacherLogin()'>Login</button></a>
-          </div>
+          </form>
         </div>
       </div>
     </div>

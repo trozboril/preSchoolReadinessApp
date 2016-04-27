@@ -5,7 +5,7 @@
   <div class='guardian-student-container'>
     <div ng-init='showStudent = false' class='guardian-individual-student' ng-repeat='student in students'>
       <p>{{student.firstName}}</p>
-      <input type='checkbox' ng-model='showStudent' name='show-student'> Show Info<br>
+      Show Info<input type='checkbox' ng-model='showStudent' name='show-student'> <br>
       <div ng-show='showStudent === true'>
         <div ng-repeat='activity in activities'>
           <div ng-if='activity.studentid === student.id'>
