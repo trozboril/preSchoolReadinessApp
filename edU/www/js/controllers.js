@@ -20,7 +20,8 @@ angular.module('eduApp.controllers', [])
 .controller('RegisterController', function ($rootScope, $scope, $location, authService) {
     $scope.user = {};
     $scope.register = function() {
-      console.log('HIT REGISTER');
+      console.log('user: ', $scope.user);
+      console.log('HIT REGISTER CONTROLLER');
       authService.register($scope.user)
         .then(function(user) {
           authService.setUserInfo(user);

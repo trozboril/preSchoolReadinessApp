@@ -13,17 +13,25 @@ angular.module('eduApp.services', [])
 })
 
 .service('authService', function ($http, $window) {
+
   var user = {};
+
+  var config = {
+      headers: {
+        'Accept': 'application/json'
+      }
+    };
+
     return {
       login: function(user) {
-        return $http.post('/auth/login', user);
+        return $http.post('https://educatedevelopunderstand.herokuapp.com/auth/login', user, config);
       },
       logout: function(user) {
         user = null;
         $window.localStorage.clear();
       },
       register: function(user) {
-        return $http.post('/auth/register', user);
+        return $http.post('https://educatedevelopunderstand.herokuapp.com/auth/register', user, config);
       },
       setUserInfo: function(userData) {
         $window.localStorage.setItem('user', JSON.stringify(userData.data.data.user));
