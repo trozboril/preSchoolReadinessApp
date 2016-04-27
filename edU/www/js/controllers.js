@@ -54,7 +54,7 @@ angular.module('eduApp.controllers', [])
       teacherService.addStudent($scope.student);
   };
   $scope.addActivity = function () {
-    console.log('hit addActivity FNCTN');
+    console.log('hit addActivity FNCTN', $scope.activity);
     teacherService.addActivity($scope.activity);
   };
   $scope.addClass = function () {
