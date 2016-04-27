@@ -1,12 +1,14 @@
+var theUrl = 'https://educatedevelopunderstand.herokuapp.com/';
+
 angular.module('eduApp.services', [])
 
 .service('studentService', function ($http) {
   return {
     getStudents: function () {
-      return $http.get('https://educatedevelopunderstand.herokuapp.com/students');
+      return $http.get(theUrl + 'students');
     },
     getStudentActivities: function (student) {
-      return $http.get('https://educatedevelopunderstand.herokuapp.com/activities');
+      return $http.get(theUrl + 'activities');
     }
   };
 
@@ -24,14 +26,14 @@ angular.module('eduApp.services', [])
 
     return {
       login: function(user) {
-        return $http.post('https://educatedevelopunderstand.herokuapp.com/auth/login', user, config);
+        return $http.post(theUrl + 'auth/login', user, config);
       },
       logout: function(user) {
         user = null;
         $window.localStorage.clear();
       },
       register: function(user) {
-        return $http.post('https://educatedevelopunderstand.herokuapp.com/auth/register', user, config);
+        return $http.post(theUrl + 'auth/register', user, config);
       },
       setUserInfo: function(userData) {
         $window.localStorage.setItem('user', JSON.stringify(userData.data.data.user));
@@ -46,13 +48,13 @@ angular.module('eduApp.services', [])
 .service('teacherService', function ($http) {
   return {
     addActivity: function (activity) {
-      return $http.post('https://educatedevelopunderstand.herokuapp.com/activity', activity);
+      return $http.post(theUrl + 'activity', activity);
     },
     addClass: function (info) {
-      return $http.post('https://educatedevelopunderstand.herokuapp.com/classes', info);
+      return $http.post(theUrl + 'classes', info);
     },
     addStudent: function (student) {
-      return $http.post('https://educatedevelopunderstand.herokuapp.com/student', student);
+      return $http.post(theUrl + 'student', student);
     }
   };
 })
