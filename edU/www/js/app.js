@@ -45,9 +45,9 @@ angular.module('eduApp', ['ionic', 'eduApp.controllers', 'eduApp.services'])
       controller: 'GuardianController'
   })
     //teacher page (can only put)
-    .state('teacher', {
-      url: '/teacher',
-      templateUrl: 'templates/teacher.html'
+    .state('activities', {
+      url: '/activities',
+      templateUrl: 'templates/activities.html'
   })
     //admin page (all creation happens here)
     .state('admin', {
