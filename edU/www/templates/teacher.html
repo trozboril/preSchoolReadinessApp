@@ -1,16 +1,14 @@
-<ion-view view-title="Teacher Dashboard">
-  <ion-content>
-  	<form name="activitiesForm">
-		<label class="item item-input">Select a Student:&nbsp;&nbsp;<select><option>All Students</option><option>Student 1</option></select></label>
-	  	<label class="item item-input">Activity Name:&nbsp;&nbsp;<input type="text" placeholder="Enter Activity Name" ng-model="activity.name"></label>
-	  	<label class="item item-input">Activity Start Time:&nbsp;&nbsp;<input type="time" placeholder="" ng-model="activity.startTime"></label>
-	  	<label class="item item-input">Activity End Time:&nbsp;&nbsp;<input type="time" ng-model="activity.endTime"></label>
-	  	<label class="item item-input">Activity Description:&nbsp;&nbsp;<textarea type="text"rows="3" cols="36" placeholder="Enter Activity Description"></textarea></label>
-	  	<label class="item item-input">Activity Type:&nbsp;&nbsp;<input type="text" placeholder="Enter Activity Type" ng-model="activity.type"></label>
-	  	<button class="button button-positive button-block"  ng-click="addActivity(activity)">Add Activity</button>
-	  	
-
-	</form>
-
+<ion-view view-title="Teacher">
+    <ion-content>
+     <form name="activitiesForm">
+     <label class="item item-input">Select a Student:&nbsp;&nbsp;<select><option>All Students</option><option>Student 1</option></select></label>
+       <label class="item item-input">Activity Name:&nbsp;&nbsp;<input type="text" placeholder="Enter Activity Name" ng-model="activity.name"></label>
+       <label class="item item-input">Activity Start Time:&nbsp;&nbsp;<input type="time" placeholder="" ng-model="activity.startTime"></label>
+       <label class="item item-input">Activity End Time:&nbsp;&nbsp;<input type="time" ng-model="activity.endTime"></label>
+       <label class="item item-input">Activity Description:&nbsp;&nbsp;<textarea type="text"rows="3" cols="36" placeholder="Enter Activity Description"></textarea></label>
+       <label class="item item-input">Activity Type:&nbsp;&nbsp;<input type="text" placeholder="Enter Activity Type" ng-model="activity.type"></label>
+       <button class="button button-positive button-block"  ng-click="addActivity()">Add Activity</button>
+  </form>
+  
   </ion-content>
-</ion-view>
+</ion-view> 
