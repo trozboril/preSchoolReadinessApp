@@ -108,4 +108,18 @@ angular.module('eduApp', ['ionic', 'eduApp.controllers', 'eduApp.services'])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
 
+  function routeChange($rootScope, $location, $window, authService) {
+  $rootScope.$on('$routeChangeStart', function(event, next, current) {
+    // if route us restricted and no token is present
+    if(next.restricted && !$window.localStorage.getItem('token')) {
+      $location.path('/login');
+    }
+    // if token and prevent logging in is true
+    if(next.preventLoggedIn && $window.localStorage.getItem('token')) {
+      $location.path('/');
+    }
+  });
+  }
+
+
 });
