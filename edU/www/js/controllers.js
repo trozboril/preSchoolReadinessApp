@@ -45,7 +45,7 @@ angular.module('eduApp.controllers', [])
 
 
 
-.controller ('addController', function ($scope, teacherService) {
+.controller ('AddController', function ($scope, teacherService) {
   $scope.student = {};
   $scope.activity = {};
   $scope.group = {};
