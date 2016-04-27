@@ -43,6 +43,20 @@ angular.module('eduApp.services', [])
     };
 })
 
+.service('teacherService', function ($http) {
+  return {
+    addActivity: function (activity) {
+      return $http.post('https://educatedevelopunderstand.herokuapp.com/activity', activity);
+    },
+    addClass: function (info) {
+      return $http.post('https://educatedevelopunderstand.herokuapp.com/classes', info);
+    },
+    addStudent: function (student) {
+      return $http.post('https://educatedevelopunderstand.herokuapp.com/student', student);
+    }
+  };
+})
+
 .service('authInterceptor', function ($window) {
   return {
       request: function(config) {

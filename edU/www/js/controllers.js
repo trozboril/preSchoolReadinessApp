@@ -43,13 +43,26 @@ angular.module('eduApp.controllers', [])
     };
 })
 
-.controller ('TeacherController', function ($scope) {
 
+
+.controller ('addController', function ($scope, teacherService) {
+  $scope.student = {};
+  $scope.activity = {};
+  $scope.group = {};
+  $scope.addStudent = function () {
+      console.log('hit student');
+      teacherService.addStudent($scope.student);
+  };
+  $scope.addActivity = function () {
+    console.log('hit addActivity FNCTN');
+    teacherService.addActivity($scope.activity);
+  };
+  $scope.addClass = function () {
+    console.log('hit addClass FNCTN');
+    teacherService.addClass($scope.group);
+  };
 })
 
-.controller('AdminController', function ($scope) {
-
-})
 
 .controller('GuardianController', function ($scope, studentService) {
   
