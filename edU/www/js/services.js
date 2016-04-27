@@ -22,6 +22,9 @@ angular.module('eduApp.services', [])
         user = null;
         $window.localStorage.clear();
       },
+      register: function(user) {
+        return $http.post('/auth/register', user);
+      },
       setUserInfo: function(userData) {
         $window.localStorage.setItem('user', JSON.stringify(userData.data.data.user));
         $window.localStorage.setItem('token', JSON.stringify(userData.data.data.token));

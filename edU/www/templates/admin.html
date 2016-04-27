@@ -3,14 +3,14 @@
 
   <div class='select-login'>
     <ul ng-init='studentCount = true'>
-      <button ng-click='teacherCount = !teacherCount; studentCount = false; classCount = false' class='btn btn-success admin-button'>New Teacher</button>
-      <button ng-click='studentCount = !studentCount; teacherCount = false; classCount = false' class='btn btn-success admin-button'>New Student</button>
-      <button ng-click='classCount = !classCount; teacherCount = false; studentCount = false' class='btn btn-success admin-button'>New Class</button>
+      <button ng-click='userCount = !userCount; studentCount = false; classCount = false' class='btn btn-success admin-button'>New User</button>
+      <button ng-click='studentCount = !studentCount; userCount = false; classCount = false' class='btn btn-success admin-button'>New Student</button>
+      <button ng-click='classCount = !classCount; userCount = false; studentCount = false' class='btn btn-success admin-button'>New Class</button>
     </ul>
   </div>
 
   <div class='login-wrap'>
-        <div class='login-div' ng-show='teacherCount'>
+        <div class='login-div' ng-show='userCount'>
           <h3>Add A User</h3>
           <form class="list">
             <label class="item item-input">Email: <br>
@@ -51,7 +51,7 @@
             
             <div style='clear:both'></div>
             <br>
-            <a href='#/admin'><button class='btn btn-primary middle-button' ng-click='addUser()'>Add User</button></a>
+            <a href='#/admin'><button class='btn btn-primary middle-button' ng-click='register()'>Add User</button></a>
           </form>
         </div>
       </div>
@@ -84,7 +84,7 @@
             </label>
             <div style='clear:both'></div>
             <br>
-            <a href='#/guardian'><button class='btn btn-primary middle-button' ng-click='addStudent()'>Add Student</button></a>
+            <a><button class='btn btn-primary middle-button' ng-click='addStudent()'>Add Student</button></a>
           </form>
         </div>
       </div>
@@ -101,7 +101,7 @@
             </label>
             <div style='clear:both'></div>
             <br>
-            <a href='#/teacher'><button class='btn btn-primary middle-button' ng-click='addClass()'>Add Class</button></a>
+            <a><button class='btn btn-primary middle-button' ng-click='addClass()'>Add Class</button></a>
           </form>
         </div>
       </div>

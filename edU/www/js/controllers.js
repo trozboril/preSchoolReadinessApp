@@ -17,6 +17,31 @@ angular.module('eduApp.controllers', [])
 
  })
 
+.controller('RegisterController', function ($rootScope, $scope, $location, authService) {
+    $scope.user = {};
+    $scope.register = function() {
+      console.log('HIT REGISTER');
+      authService.register($scope.user)
+        .then(function(user) {
+          authService.setUserInfo(user);
+          $location.path('/');
+          $rootScope.currentUser = authService.getUserInfo();
+        })
+        .catch(function(err) {
+          // check status code, send appropriate message
+          console.log(err);
+        });
+    };
+
+    $scope.addStudent = function () {
+      console.log('hit student');
+    };
+
+    $scope.addClass = function () {
+      console.log('hit class');
+    };
+})
+
 .controller ('TeacherController', function ($scope) {
 
 })
