@@ -55,13 +55,6 @@ angular.module('eduApp', ['ionic', 'eduApp.controllers', 'eduApp.services'])
       url: '/admin',
       templateUrl: 'templates/admin.html',
       controller: 'RegisterController'
-  })
-
-  // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
   });
   
 

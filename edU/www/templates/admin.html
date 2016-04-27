@@ -1,110 +1,116 @@
 <ion-view view-title="Admin Dashboard">
+  <ion-nav-buttons side="right">
+   <a href='#/login'><button class="button" ng-click="logout()">
+     logout
+   </button></a>
+ </ion-nav-buttons>
+
   <ion-content>
 
-  <div class='select-login'>
-    <ul ng-init='studentCount = true'>
-      <button ng-click='userCount = !userCount; studentCount = false; classCount = false' class='btn btn-success admin-button'>New User</button>
-      <button ng-click='studentCount = !studentCount; userCount = false; classCount = false' class='btn btn-success admin-button'>New Student</button>
-      <button ng-click='classCount = !classCount; userCount = false; studentCount = false' class='btn btn-success admin-button'>New Class</button>
-    </ul>
-  </div>
+    <div class='select-login'>
+      <ul ng-init='studentCount = true'>
+        <button ng-click='userCount = !userCount; studentCount = false; classCount = false' class='btn btn-success admin-button'>New User</button>
+        <button ng-click='studentCount = !studentCount; userCount = false; classCount = false' class='btn btn-success admin-button'>New Student</button>
+        <button ng-click='classCount = !classCount; userCount = false; studentCount = false' class='btn btn-success admin-button'>New Class</button>
+      </ul>
+    </div>
 
-  <div class='login-wrap'>
-        <div class='login-div' ng-show='userCount'>
-          <h3>Add A User</h3>
-          <form class="list">
-            <label class="item item-input">Email: <br>
-            <input type="text" placeholder="Teacher email...">
-            </label>
+    <div class='login-wrap'>
+          <div class='login-div' ng-show='userCount'>
+            <h3>Add A User</h3>
+            <form class="list">
+              <label class="item item-input">Email: <br>
+              <input type="text" ng-model='user.email' placeholder="Teacher email...">
+              </label>
 
-            <label class="item item-input">Password: <br>
-            <input type="password" placeholder="Teacher password...">
-            </label>
+              <label class="item item-input">Password: <br>
+              <input type="password" ng-model='user.password' placeholder="Teacher password...">
+              </label>
 
-            <label class="item item-input">Phone: <br>
-            <input type="text" placeholder="Teacher phone...">
-            </label>
+              <label class="item item-input">Phone: <br>
+              <input type="text" ng-model='user.phone' placeholder="Teacher phone...">
+              </label>
 
-            <label class="item item-input">First Name: <br>
-            <input type="text" placeholder="first name...">
-            </label>
+              <label class="item item-input">First Name: <br>
+              <input type="text" ng-model='user.firstName' placeholder="first name...">
+              </label>
 
-            <label class="item item-input">Last Name: <br>
-            <input type="text" placeholder="last name...">
-            </label>
+              <label class="item item-input">Last Name: <br>
+              <input type="text" ng-model='user.lastName' placeholder="last name...">
+              </label>
 
-            <label class="item item-input">School ID: <br>
-            <input type="text" placeholder="school...">
-            </label>
+              <label class="item item-input">School ID: <br>
+              <input type="text" ng-model='user.schoolid'  placeholder="school...">
+              </label>
 
-            <label class='item item-input'>Role: <br>
-              <select>
-                <option value='teacher'>Teacher</option>
-                <option value='guardian'>Guardian</option>
-                <option value='admin'>Admin</option>
-              </select>
-            </label>
+              <label class='item item-input'>Role: <br>
+                <select ng-model='user.role'>
+                  <option value='teacher'>Teacher</option>
+                  <option value='guardian'>Guardian</option>
+                  <option value='admin'>Admin</option>
+                </select>
+              </label>
 
-            <label class="item item-input">Image Url: <br>
-            <input type="text" placeholder="Image url...">
-            </label>
-            
-            <div style='clear:both'></div>
-            <br>
-            <a href='#/admin'><button class='btn btn-primary middle-button' ng-click='register()'>Add User</button></a>
-          </form>
+              <label class="item item-input">Image Url: <br>
+              <input type="text" ng-model='user.image' placeholder="Image url...">
+              </label>
+              
+              <div style='clear:both'></div>
+              <br>
+              <a href='#/admin'><button class='button button-positive button-block' ng-click='register()'>Add User</button></a>
+            </form>
+          </div>
         </div>
-      </div>
-      <div class='login-wrap'>
-        <div class='login-div' ng-show='studentCount'>
-          <h3>Add A Student</h3>
-          <form class="list">
-            <label class="item item-input">First Name: <br>
-            <input type="text" placeholder="first name...">
-            </label>
+        <div class='login-wrap'>
+          <div class='login-div' ng-show='studentCount'>
+            <h3>Add A Student</h3>
+            <form class="list">
+              <label class="item item-input">First Name: <br>
+              <input type="text" ng-model='student.firstName' placeholder="first name...">
+              </label>
 
-            <label class="item item-input">Last Name: <br>
-            <input type="password" placeholder="last name...">
-            </label>
+              <label class="item item-input">Last Name: <br>
+              <input type="password" ng-model='student.lastName' placeholder="last name...">
+              </label>
 
-            <label class="item item-input">Image URL: <br>
-            <input type="text" placeholder="image URL...">
-            </label>
+              <label class="item item-input">Image URL: <br>
+              <input type="text" ng-model='student.imageURL' placeholder="image URL...">
+              </label>
 
-            <label class="item item-input">Class ID: <br>
-            <input type="number" placeholder="class ID...">
-            </label>
+              <label class="item item-input">Class ID: <br>
+              <input type="number" ng-model='student.classid' placeholder="class ID...">
+              </label>
 
-            <label class="item item-input">Guardian ID 1: <br>
-            <input type="number" placeholder="guardian ID...">
-            </label>
+              <label class="item item-input">Guardian ID 1: <br>
+              <input type="number" ng-model='student.id1' placeholder="guardian ID...">
+              </label>
 
-            <label class="item item-input">Guardian ID 2: <br>
-            <input type="number" placeholder="guardian ID...">
-            </label>
-            <div style='clear:both'></div>
-            <br>
-            <a><button class='btn btn-primary middle-button' ng-click='addStudent()'>Add Student</button></a>
-          </form>
+              <label class="item item-input">Guardian ID 2: <br>
+              <input type="number" ng-model='student.id2' placeholder="guardian ID...">
+              </label>
+              <div style='clear:both'></div>
+              <br>
+              <a><button class='button button-positive button-block' ng-click='addStudent()'>Add Student</button></a>
+            </form>
+          </div>
         </div>
-      </div>
-      <div class='login-wrap'>
-        <div class='login-div' ng-show='classCount'>
-          <h3>Add A Class</h3>
-          <form class="list">
-            <label class="item item-input">Name: <br>
-            <input type="text" placeholder="Name class...">
-            </label>
+        <div class='login-wrap'>
+          <div class='login-div' ng-show='classCount'>
+            <h3>Add A Class</h3>
+            <form class="list">
+              <label class="item item-input">Name: <br>
+              <input type="text" ng-model='group.name' placeholder="Name class...">
+              </label>
 
-            <label class="item item-input">Teacher ID: <br>
-            <input type="number" placeholder="Teacher ID...">
-            </label>
-            <div style='clear:both'></div>
-            <br>
-            <a><button class='btn btn-primary middle-button' ng-click='addClass()'>Add Class</button></a>
-          </form>
+              <label class="item item-input">Teacher ID: <br>
+              <input type="number" ng-model='group.teacher' placeholder="Teacher ID...">
+              </label>
+              <div style='clear:both'></div>
+              <br>
+              <a><button class='button button-positive button-block' ng-click='addClass()'>Add Class</button></a>
+            </form>
+          </div>
         </div>
-      </div>
 
   </ion-content>
 </ion-view>
