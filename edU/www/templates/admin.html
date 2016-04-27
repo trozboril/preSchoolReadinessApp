@@ -11,18 +11,47 @@
 
   <div class='login-wrap'>
         <div class='login-div' ng-show='teacherCount'>
-          <h3>Add A Teacher</h3>
+          <h3>Add A User</h3>
           <form class="list">
-            <label class="item item-input">Email: 
-            <input type="text" placeholder="Admin email...">
+            <label class="item item-input">Email: <br>
+            <input type="text" placeholder="Teacher email...">
             </label>
 
-            <label class="item item-input">Password:    
-            <input type="password" placeholder="Admin password...">
+            <label class="item item-input">Password: <br>
+            <input type="password" placeholder="Teacher password...">
             </label>
+
+            <label class="item item-input">Phone: <br>
+            <input type="text" placeholder="Teacher phone...">
+            </label>
+
+            <label class="item item-input">First Name: <br>
+            <input type="text" placeholder="first name...">
+            </label>
+
+            <label class="item item-input">Last Name: <br>
+            <input type="text" placeholder="last name...">
+            </label>
+
+            <label class="item item-input">School ID: <br>
+            <input type="text" placeholder="school...">
+            </label>
+
+            <label class='item item-input'>Role: <br>
+              <select>
+                <option value='teacher'>Teacher</option>
+                <option value='guardian'>Guardian</option>
+                <option value='admin'>Admin</option>
+              </select>
+            </label>
+
+            <label class="item item-input">Image Url: <br>
+            <input type="text" placeholder="Image url...">
+            </label>
+            
             <div style='clear:both'></div>
             <br>
-            <a href='#/admin'><button class='btn btn-primary' ng-click='adminLogin()'>Login</button></a>
+            <a href='#/admin'><button class='btn btn-primary middle-button' ng-click='addUser()'>Add User</button></a>
           </form>
         </div>
       </div>
@@ -30,16 +59,32 @@
         <div class='login-div' ng-show='studentCount'>
           <h3>Add A Student</h3>
           <form class="list">
-            <label class="item item-input">Email: 
-            <input type="text" placeholder="Guardian email...">
+            <label class="item item-input">First Name: <br>
+            <input type="text" placeholder="first name...">
             </label>
 
-            <label class="item item-input">Password: 
-            <input type="password" placeholder="Guardian password...">
+            <label class="item item-input">Last Name: <br>
+            <input type="password" placeholder="last name...">
+            </label>
+
+            <label class="item item-input">Image URL: <br>
+            <input type="text" placeholder="image URL...">
+            </label>
+
+            <label class="item item-input">Class ID: <br>
+            <input type="number" placeholder="class ID...">
+            </label>
+
+            <label class="item item-input">Guardian ID 1: <br>
+            <input type="number" placeholder="guardian ID...">
+            </label>
+
+            <label class="item item-input">Guardian ID 2: <br>
+            <input type="number" placeholder="guardian ID...">
             </label>
             <div style='clear:both'></div>
             <br>
-            <a href='#/guardian'><button class='btn btn-primary' ng-click='guardianLogin()'>Login</button></a>
+            <a href='#/guardian'><button class='btn btn-primary middle-button' ng-click='addStudent()'>Add Student</button></a>
           </form>
         </div>
       </div>
@@ -47,16 +92,16 @@
         <div class='login-div' ng-show='classCount'>
           <h3>Add A Class</h3>
           <form class="list">
-            <label class="item item-input">Email: 
-            <input type="text" placeholder="Teacher email...">
+            <label class="item item-input">Name: <br>
+            <input type="text" placeholder="Name class...">
             </label>
 
-            <label class="item item-input">Password: 
-            <input type="password" placeholder="Teacher password...">
+            <label class="item item-input">Teacher ID: <br>
+            <input type="number" placeholder="Teacher ID...">
             </label>
             <div style='clear:both'></div>
             <br>
-            <a href='#/teacher'><button class='btn btn-primary' ng-click='teacherLogin()'>Login</button></a>
+            <a href='#/teacher'><button class='btn btn-primary middle-button' ng-click='addClass()'>Add Class</button></a>
           </form>
         </div>
       </div>

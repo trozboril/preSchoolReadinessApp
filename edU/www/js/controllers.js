@@ -2,6 +2,7 @@ angular.module('eduApp.controllers', [])
 
 .controller('LoginController', function ($scope, $rootScope, $location, authService) {
   $scope.login = function() {
+    console.log('LOGIN CONTROLLER HIT');
       authService.login($scope.user)
         .then(function(user) {
           authService.setUserInfo(user);
