@@ -1,11 +1,13 @@
 <ion-view view-title="Admin Dashboard">
   <ion-content>
 
-  <ul ng-init='studentCount = true'>
-    <button ng-click='teacherCount = !teacherCount; studentCount = false; classCount = false' class='btn btn-success admin-button'>New Teacher</button>
-    <button ng-click='studentCount = !studentCount; teacherCount = false; classCount = false' class='btn btn-success admin-button'>New Student</button>
-    <button ng-click='classCount = !classCount; teacherCount = false; studentCount = false' class='btn btn-success admin-button'>New Class</button>
-  </ul>
+  <div class='select-login'>
+    <ul ng-init='studentCount = true'>
+      <button ng-click='teacherCount = !teacherCount; studentCount = false; classCount = false' class='btn btn-success admin-button'>New Teacher</button>
+      <button ng-click='studentCount = !studentCount; teacherCount = false; classCount = false' class='btn btn-success admin-button'>New Student</button>
+      <button ng-click='classCount = !classCount; teacherCount = false; studentCount = false' class='btn btn-success admin-button'>New Class</button>
+    </ul>
+  </div>
 
   <div class='login-wrap'>
         <div class='login-div' ng-show='teacherCount'>
