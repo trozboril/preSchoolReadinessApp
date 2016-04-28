@@ -1,6 +1,6 @@
 <ion-view view-title="Activities">
 	<ion-nav-buttons side="right">
-   		<a href=''><button class="button button-small button-stable button-outline" ng-click="logout()">
+   		<a href='/'><button class="button button-small button-stable button-outline" ng-click="logout()">
      		logout
    		</button></a>
  	</ion-nav-buttons>
@@ -21,7 +21,7 @@
       
       <label class="item item-input">Activity End Time:&nbsp;&nbsp;<input type="time" ng-model="activity.endTime"></label>
       
-      <label class="item item-input">Activity Description:&nbsp;&nbsp;<textarea type="text"rows="3" cols="36" placeholder="Enter Activity Description"></textarea></label>
+      <label class="item item-input">Activity Description:&nbsp;&nbsp;<textarea type="text" rows="3" cols="36" ng-model="activity.description" placeholder="Enter Activity Description"></textarea></label>
       
       <label class="item item-input">Activity Type:&nbsp;&nbsp;<input type="text" placeholder="Enter Activity Type" ng-model="activity.type"></label>
 
