@@ -6,41 +6,22 @@
   </ion-nav-buttons>
   <ion-content>
 
-  <h3>&nbsp;Students:</h3>
-    <ion-list>
-      <ion-item ng-init='showStudent = false' class='guardian-individual-student' ng-repeat='student in students'>
-        
-        <ion-checkbox check="false" item-right ng-model='showStudent' name='show-student'><strong>{{student.firstName}}&nbsp;{{student.lastName}}&nbsp;</strong></ion-checkbox>
-        <ion-option-button class="button-assertive">
-          <i class="ion-minus-circled"></i>
-        </ion-option-button>
+    <h3>&nbsp;Students:</h3>
+  
+    <div ng-init='showStudent = false' ng-repeat='student in students'>
+      
+      <ion-checkbox class="student" check="false" item-right ng-model='showStudent' name='show-student'><div><strong>{{student.firstName}}&nbsp;{{student.lastName}}&nbsp;</strong></div></ion-checkbox>
 
-
-        <div ng-show='showStudent === true'>
-          <div ng-repeat='activity in activities'>
-            <div ng-if='activity.studentid === student.id'>
-              <table border="1" style="width:100%">
-                <tr>
-                  <th><strong>Activity:</strong></th>
-                  <th><strong>Description:</strong></th>
-                  <th><strong>Type:</strong></th>
-                  <th><strong>Begin:</strong></th>
-                  <th><strong>End:</strong></th>
-                </tr>
-                <tr>
-                  <td>{{activity.name}}</td>
-                  <td>{{activity.description}}</td>
-                  <td>{{activity.type}}</td>
-                  <td>{{activity.startTime}}</td>
-                  <td>{{activity.finishTime}}</td>
-                </tr>
-                
-              </table>
-            </div>
-          </div>
-        </div>
-      </ion-item>
-    </ion-list>
+      <div class="activity" ng-show='showStudent === true' ng-repeat='activity in activities' ng-if='activity.studentid === student.id'>
+         
+        <span>Activity:&nbsp;{{activity.name}}</span><br>
+        <span>Description:&nbsp;{{activity.description}}</span><br>
+        <span>Type:&nbsp;{{activity.type}}</span><br>
+        <span>Begin:&nbsp;{{activity.startTime}}</span><br>
+        <span>End:&nbsp;{{activity.finishTime}}</span>
+            
+      </div>
+    </div>
   
 
   </ion-content>
