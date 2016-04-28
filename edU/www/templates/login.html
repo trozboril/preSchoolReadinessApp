@@ -2,15 +2,15 @@
   <ion-content>
         <img src='http://i.imgur.com/6nuP093.png'>
     
-        <div ng-init='guardianCount = true;'>
+        <!-- <div ng-init='guardianCount = true;'>
           <div class="button-bar">
             <button class='button button-calm button-block' ng-click='guardianCount = !guardianCount; schoolCount = false'>Guardian</button>
 
             <button class='button button-calm button-block' ng-click='schoolCount = !schoolCount; guardianCount = false'>School</button>
           </div>
-        </div>
+        </div> -->
   
-        <div ng-show='schoolCount'>
+        <!-- <div ng-show='schoolCount'>
           <h3>&nbsp;School Login:</h3>
           <form class="list">
             <label class="item item-input">Email: <br>
@@ -24,18 +24,17 @@
             <br>
             <button class='button button-positive button-block' ng-click='login()'>Login</button>
           </form>
-        </div>
+        </div> -->
       
       
-        <div ng-show='guardianCount'>
-         <h3>&nbsp;Guardian Login:</h3>
+        <div>
           <form class="list">
             <label class="item item-input">Email: <br>
-            <input type="text" ng-model='user.email' placeholder="Guardian email...">
+            <input type="text" ng-model='user.email' placeholder="enter email...">
             </label>
 
             <label class="item item-input">Password: <br>
-            <input type="password" ng-model='user.password' placeholder="Guardian password...">
+            <input type="password" ng-model='user.password' placeholder="enter password...">
             </label>
             <div style='clear:both'></div>
             <br>
