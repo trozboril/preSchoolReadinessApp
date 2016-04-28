@@ -2,11 +2,11 @@
   <ion-content>
     
         <div ng-init='guardianCount = true;'>
-          
-          <button class='button button-calm button-block' ng-click='guardianCount = !guardianCount; schoolCount = false'>Guardian</button>
+          <div class="button-bar">
+            <button class='button button-calm button-block' ng-click='guardianCount = !guardianCount; schoolCount = false'>Guardian</button>
 
-          <button class='button button-calm button-block' ng-click='schoolCount = !schoolCount; guardianCount = false'>School</button>
-
+            <button class='button button-calm button-block' ng-click='schoolCount = !schoolCount; guardianCount = false'>School</button>
+          </div>
         </div>
   
         <div ng-show='schoolCount'>
@@ -21,7 +21,7 @@
             </label>
             <div style='clear:both'></div>
             <br>
-            <a href='#/admin'><button class='button button-positive button-block' ng-click='login()'>Login</button></a>
+            <button class='button button-positive button-block' ng-click='login()'>Login</button>
           </form>
         </div>
       
@@ -38,7 +38,7 @@
             </label>
             <div style='clear:both'></div>
             <br>
-            <a href='#/guardian'><button class='button button-positive button-block' ng-click='login()'>Login</button></a>
+            <button class='button button-positive button-block' ng-click='login()'>Login</button>
           </form>
         </div>
       
