@@ -1,0 +1,28 @@
+<ion-view view-title="Activities">
+	<ion-nav-buttons side="right">
+   		<a href='#/login'><button class="button button-small button-stable button-outline" ng-click="logout()">
+     		logout
+   		</button></a>
+ 	</ion-nav-buttons>
+  <ion-content>
+    <form name="activitiesForm">
+      
+      <label class="item item-input">Select a Student:&nbsp;&nbsp;<select ng-model="activity.studentid"><option value="*">All Students</option><option value="student_1">Student 1</option></select></label>
+      
+      <label class="item item-input">Activity Name:&nbsp;&nbsp;<input type="text" placeholder="Enter Activity Name" ng-model="activity.name"></label>
+      
+      <label class="item item-input">Activity Start Time:&nbsp;&nbsp;<input type="time" placeholder="" ng-model="activity.startTime"></label>
+      
+      <label class="item item-input">Activity End Time:&nbsp;&nbsp;<input type="time" ng-model="activity.endTime"></label>
+      
+      <label class="item item-input">Activity Description:&nbsp;&nbsp;<textarea type="text"rows="3" cols="36" placeholder="Enter Activity Description"></textarea></label>
+      
+      <label class="item item-input">Activity Type:&nbsp;&nbsp;<input type="text" placeholder="Enter Activity Type" ng-model="activity.type"></label>
+
+      <button class="button button-positive button-block"  ng-click="addActivity()">Add 
+      Activity</button>
+
+    </form>
+  
+  </ion-content>
+</ion-view> 
