@@ -3,30 +3,33 @@ angular.module('eduApp.controllers', [])
 .controller('LoginController', function ($scope, $rootScope, $location, authService) {
   $scope.user = {};
   $scope.login = function() {
-      authService.login($scope.user)
-        .then(function(user) {
-          authService.setUserInfo(user);
-          $location.path('/');
-          $rootScope.currentUser = authService.getUserInfo();
-          console.log('scope:', $rootScope.currentUser);
-        })
-        .catch(function(err) {
-          // check status code, send appropriate message
-          console.log(err);
-        });
-    };
-
+    authService.login($scope.user)
+    .then(function(user) {
+      authService.setUserInfo(user);
+      $rootScope.currentUser = JSON.parse(authService.getUserInfo());
+      var role = $rootScope.currentUser.role;
+      if (role !== 'admin') $location.path('/guardian');
+      
+      if (role == 'admin') $location.path('/admin');
+      
+      console.log('scope:', role);
+    })
+    .catch(function(err) {
+      // check status code, send appropriate message
+      console.log(err);
+    });
+  };
  })
 
 .controller('RegisterController', function ($rootScope, $scope, $location, authService) {
-    $scope.user = {};
+    
     $scope.register = function() {
       console.log('user: ', $scope.user);
       authService.register($scope.user)
         .then(function(user) {
-          authService.setUserInfo(user);
-          $location.path('/');
-          $rootScope.currentUser = authService.getUserInfo();
+          console.log('suptho', user);
+          $location.path('/admin');
+       
         })
         .catch(function(err) {
           // check status code, send appropriate message
