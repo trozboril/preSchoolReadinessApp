@@ -37,7 +37,7 @@ angular.module('eduApp', ['ionic', 'eduApp.controllers', 'eduApp.services'])
 //load main page
 
     .state('login', {
-      url: '/',
+      url: '',
       templateUrl: 'templates/login.html',
       controller: 'LoginController'
   })
