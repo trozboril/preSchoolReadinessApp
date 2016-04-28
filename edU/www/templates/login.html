@@ -3,22 +3,21 @@
     
         <div ng-init='guardianCount = true;'>
           
-          <div class="button-bar">
-            <button class='button button-calm button-block' ng-click='guardianCount = !guardianCount; schoolCount = false'>Guardian</button>
+          <button class='button button-calm button-block' ng-click='guardianCount = !guardianCount; schoolCount = false'>Guardian</button>
 
-            <button class='button button-calm button-block' ng-click='schoolCount = !schoolCount; guardianCount = false'>School</button>
-          </div>
+          <button class='button button-calm button-block' ng-click='schoolCount = !schoolCount; guardianCount = false'>School</button>
+
         </div>
   
         <div ng-show='schoolCount'>
           <h3>&nbsp;School Login:</h3>
           <form class="list">
             <label class="item item-input">Email: <br>
-            <input type="text" placeholder="Admin email...">
+            <input type="text" ng-model='user.email' placeholder="Admin email...">
             </label>
 
             <label class="item item-input">Password: <br>  
-            <input type="password" placeholder="Admin password...">
+            <input type="password" ng-model='user.password' placeholder="Admin password...">
             </label>
             <div style='clear:both'></div>
             <br>
@@ -31,11 +30,11 @@
          <h3>&nbsp;Guardian Login:</h3>
           <form class="list">
             <label class="item item-input">Email: <br>
-            <input type="text" placeholder="Guardian email...">
+            <input type="text" ng-model='user.email' placeholder="Guardian email...">
             </label>
 
             <label class="item item-input">Password: <br>
-            <input type="password" placeholder="Guardian password...">
+            <input type="password" ng-model='user.password' placeholder="Guardian password...">
             </label>
             <div style='clear:both'></div>
             <br>

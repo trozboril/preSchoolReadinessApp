@@ -1,13 +1,14 @@
 angular.module('eduApp.controllers', [])
 
 .controller('LoginController', function ($scope, $rootScope, $location, authService) {
+  $scope.user = {};
   $scope.login = function() {
-    console.log('LOGIN CONTROLLER HIT');
       authService.login($scope.user)
         .then(function(user) {
           authService.setUserInfo(user);
           $location.path('/');
           $rootScope.currentUser = authService.getUserInfo();
+          console.log('scope:', $rootScope.currentUser);
         })
         .catch(function(err) {
           // check status code, send appropriate message
@@ -21,7 +22,6 @@ angular.module('eduApp.controllers', [])
     $scope.user = {};
     $scope.register = function() {
       console.log('user: ', $scope.user);
-      console.log('HIT REGISTER CONTROLLER');
       authService.register($scope.user)
         .then(function(user) {
           authService.setUserInfo(user);
