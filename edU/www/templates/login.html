@@ -3,10 +3,11 @@
     
         <div ng-init='guardianCount = true;'>
           
-          <button class='button button-calm button-block' ng-click='guardianCount = !guardianCount; schoolCount = false'>Guardian</button>
+          <div class="button-bar">
+            <button class='button button-calm button-block' ng-click='guardianCount = !guardianCount; schoolCount = false'>Guardian</button>
 
-          <button class='button button-calm button-block' ng-click='schoolCount = !schoolCount; guardianCount = false'>School</button>
-
+            <button class='button button-calm button-block' ng-click='schoolCount = !schoolCount; guardianCount = false'>School</button>
+          </div>
         </div>
   
         <div ng-show='schoolCount'>
