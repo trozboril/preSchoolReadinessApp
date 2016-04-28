@@ -13,6 +13,8 @@ angular.module('eduApp.controllers', [])
       if (role == 'admin') $location.path('/admin');
       
       console.log('scope:', role);
+
+      // $window.localStorage.setItem('token', user.token);
     })
     .catch(function(err) {
       // check status code, send appropriate message
@@ -22,7 +24,7 @@ angular.module('eduApp.controllers', [])
  })
 
 .controller('RegisterController', function ($rootScope, $scope, $location, authService) {
-    
+    $scope.user = {};
     $scope.register = function() {
       console.log('user: ', $scope.user);
       authService.register($scope.user)
@@ -36,25 +38,16 @@ angular.module('eduApp.controllers', [])
           console.log(err);
         });
     };
-
-    $scope.addStudent = function () {
-      console.log('hit student');
-    };
-
-    $scope.addClass = function () {
-      console.log('hit class');
-    };
 })
-
-
 
 .controller ('AddController', function ($scope, teacherService) {
   $scope.student = {};
   $scope.activity = {};
   $scope.group = {};
+
   $scope.addStudent = function () {
       console.log('hit student');
-      teacherService.addStudent($scope.student);
+      teacherService.createStudent($scope.student);
   };
   $scope.addActivity = function () {
     console.log('hit addActivity FNCTN', $scope.activity);

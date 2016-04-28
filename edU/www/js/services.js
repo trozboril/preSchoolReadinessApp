@@ -1,5 +1,7 @@
 var theUrl = 'https://educatedevelopunderstand.herokuapp.com/';
 
+//https://educatedevelopunderstand.herokuapp.com/
+
 angular.module('eduApp.services', [])
 
 .service('studentService', function ($http) {
@@ -48,14 +50,17 @@ angular.module('eduApp.services', [])
 .service('teacherService', function ($http) {
   return {
     addActivity: function (activity) {
-      return $http.post(theUrl + 'activity', activity);
+      console.log('activity: ', activity);
+      return $http.post(theUrl + 'activities', activity);
     },
     addClass: function (info) {
       return $http.post(theUrl + 'classes', info);
     },
-    addStudent: function (student) {
-      return $http.post(theUrl + 'student', student);
-    }
+    createStudent: function (student) {
+      console.log('hit addStudent service');
+
+      return $http.post(theUrl + 'students', student);
+    },
   };
 })
 
