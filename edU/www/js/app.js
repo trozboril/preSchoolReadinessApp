@@ -33,6 +33,12 @@ angular.module('eduApp', ['ionic', 'eduApp.controllers', 'eduApp.services'])
 
 //load main page
 
+    //root for login/begining auth
+    .state('root', {
+      url: '/',
+      templateUrl: 'templates/root.html'
+  })
+
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
@@ -58,7 +64,7 @@ angular.module('eduApp', ['ionic', 'eduApp.controllers', 'eduApp.services'])
   
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/');
 
   function routeChange($rootScope, $location, $window, authService) {
   $rootScope.$on('$routeChangeStart', function(event, next, current) {
