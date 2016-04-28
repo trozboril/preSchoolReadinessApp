@@ -7,7 +7,13 @@
   <ion-content>
     <form name="activitiesForm">
       
-      <label class="item item-input">Select a Student:&nbsp;&nbsp;<select ng-model="activity.studentid"><option value="*">All Students</option><option value="student_1">Student 1</option></select></label>
+      <label class="item item-input">Select a Student:&nbsp;&nbsp;
+        <select ng-model="activity.studentid">
+          <option value="" selected>Select A Student</option>
+          <option value="*">All Students</option>
+          <option value="student_1">Student 1</option>
+        </select>
+      </label>
       
       <label class="item item-input">Activity Name:&nbsp;&nbsp;<input type="text" placeholder="Enter Activity Name" ng-model="activity.name"></label>
       
