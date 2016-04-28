@@ -2,53 +2,15 @@
 
 /*LOGIN PAGE*/
 
-.login-container {
-  width: 100%;
-}
-
-.select-button {
-  width: 150px;
-}
-
-.select-login {
-  height: 50px;
-}
-
-.login-wrap {
-  margin-left: 5px;
-  border: 1px solid black;
-  width: 300px;
-}
-
-.login-type {
-  display: inline-block;
-  list-style-type: none;
-}
-
-.login-div {
-  margin-left: 7px;
-  margin-top: 5px;
-  width: 96%
-}
-
-.login-input {
- margin-top: 5px;
-}
-
 /*GUARDIAN PAGE*/
 
-.guardian-individual-student {
-  border: 1px solid black;
+.student {
+  background-color: darkgray;
+}
+
+.activity {
+  background-color: lightgray;
 }
 
 /*ADMIN PAGE*/
 
-.admin-button {
-  width: 100px;
-}
-
-/*BUTTONS*/
-
-.middle-button {
-  margin-left: 5%;
-}
