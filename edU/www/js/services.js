@@ -1,4 +1,4 @@
-var theUrl = 'http://10.2.12.51:3000/';
+var theUrl = 'https://educatedevelopunderstand.herokuapp.com/';
 
 //https://educatedevelopunderstand.herokuapp.com/
 //http://10.2.12.51:3000/
